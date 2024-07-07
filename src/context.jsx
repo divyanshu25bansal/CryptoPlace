@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 
 export const coinContext = createContext();
 
@@ -9,7 +9,7 @@ const CoinApp = (props) => {
   const [currency, setCurrency] = useState("inr"); // to set currency format
   const [symbol,setSymbol] = useState("")
 
-  const gatherMarketData = () => {
+  const gatherMarketData = async () => {
     const options = {
       method: "GET",
       headers: {
@@ -28,9 +28,11 @@ const CoinApp = (props) => {
       })
       .catch((err) => console.error(err));
   };
+
+  
   useEffect(() => {
     gatherMarketData();
-    if(currency==="INR"){
+    if(currency==="inr"){
       setSymbol("₹")
     }else {
       setSymbol("$")

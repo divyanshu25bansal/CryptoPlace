@@ -36,7 +36,10 @@ const CryptoPage = () => {
     gatherHistoricalData();
   }, [currency]);
 
-  if ((cryptoData, historyData)) {
+
+  
+
+  if (cryptoData&&historyData) {
     return (
       <div className="crypto-data">
         <div className="crypto-data-image">
