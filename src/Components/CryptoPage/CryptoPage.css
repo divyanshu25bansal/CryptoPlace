@@ -1,0 +1,78 @@
+
+.crypto-data{
+    max-width: 800px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.crypto-data-image img{
+    width: 100px;
+}
+.crypto-data-image p{
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.crypto-data-details{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.crypto-data-details ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #5f5d5f;
+    padding: 10px 0px;
+}
+
+.crypto-data-details ul li {
+    font-weight: 300;
+}
+
+.line-chart {
+    width: 600px;
+    height: 400px;
+    margin: 50px auto 0px;
+}
+
+.spinner{
+    display: grid;
+    place-self: center;
+    min-height: 80vh;
+}
+
+.spin{
+    width: 95px;
+    height: 95px;
+    place-self: center;
+    border:5px solid rgb(236, 235, 235);
+    border-top-color:transparent;
+    border-radius: 50%;
+    animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width:900px) {
+    .crypto-data-image img{
+        width: 80px;
+    }
+    .line-chart{
+        max-width: 350px;
+    }
+
+    .crypto-data-details{
+        max-width: 300px;
+    }
+}

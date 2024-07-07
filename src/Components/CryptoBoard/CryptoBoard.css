@@ -1,0 +1,74 @@
+.cryto-board {
+  color: white;
+  /* background:linear-gradient(rgba(83,3,255,0.15),rgba(105,2,153,0.15)); */
+  /* background: rgb(78,45,103); */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+  background: linear-gradient(
+    90deg,
+    rgba(78, 45, 103, 0.9023984593837535) 9%,
+    rgba(41, 80, 87, 1) 79%
+  );
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px 0px;
+  border-radius: 15px;
+}
+
+.cryto-board .title {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+  font-size: 18px;
+}
+
+.cryto-board .crypto-board-coins {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  padding: 15px 20px;
+  align-items: center;
+  font-size: 18px;
+  cursor: default;
+}
+.cryto-board .crypto-board-coins .crypto-board-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cryto-board .crypto-board-coins .crypto-board-image img {
+  width: 30px;
+}
+
+.crypto-name {
+  margin-right: 40px;
+}
+
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .cryto-board {
+    width: 80%;
+  }
+  .market-data {
+    display: none;
+  }
+  .cryto-board .title {
+    grid-template-columns: 1fr 1.5fr 1.5fr 0.5fr;
+    font-size: 16px;
+  }
+
+  .cryto-board .crypto-board-coins {
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    font-size: 14px;
+  }
+}
